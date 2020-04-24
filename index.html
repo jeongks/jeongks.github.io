@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>WDD330 Mobile Application Pilot | BYU-Idaho | Kisuk Jeong</title>
+  <meta name="description" content="This is an assignment portal home page for WDD330">
+  
+  
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+  
+</head>
+
+<body>
+  <header>
+    <img src="images/family.jpg" alt="Photo of my family">
+    <h1 id="myname">Kisuk Jeong</h1>
+  </header>
+  
+  <main>
+    <h2>WDD330 Portfolio</h2>
+    <ol>
+      <li><a href="week1.html">Week 01</a></li>
+      
+    </ol>
+
+  </main>
+
+  <footer>
+    &copy; 2020 | Kisuk Jeong | Seoul, Korea | <a href="https://www.byui.edu/online">BYUI Online Learning</a>
+    <br>Last Updated: <span id="date"></span>
+    <script>
+      let today = new Date();
+      let date = today.getDate()+'/'+String (today.getMonth() +1).padStart(2, '0')+'/'+today.getFullYear()+' '+today.getHours()+':'+today.getMinutes()+':'+today.getSeconds();
+      document.getElementById("date").textContent = date;
+    </script> 
+  </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js">
+    
+  </script>
+  <script src="webfont.js"></script>
+</body>
+
+</html>
