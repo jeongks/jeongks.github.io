@@ -1,0 +1,25 @@
+body {
+    width: 90%;
+    margin: 10px 5%;
+}
+
+
+.reading {
+    background-color: #f2f3e7;
+}
+
+.question {
+    font-size: 1.2em;
+    background-color: aquamarine;
+}
+
+.example {
+    background-color: antiquewhite;
+    margin: 10px;
+    padding: 10px;
+}
+
+footer {
+    margin-top: 10px;
+    background-color: aqua;
+}

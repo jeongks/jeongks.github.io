@@ -9,7 +9,7 @@
   
   
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-
+  <link rel="stylesheet" href="style.css"/>
   
 </head>
 
@@ -40,7 +40,84 @@
         <input type="text" id="input4">
         
         <div id="input3div"></div>
+    <div class="reading">
+      <h2>Reading Note</h2>
+      <h3>Bitwaise XOR</h3>
+      <p>Return not same value as 1. For example,</p>
+      <p>1100 and 1010</p>
+      <p>1100</p>
+      <p>1010</p>
+      <p>0110(return)</p>
+      <p>8 ^ 6 Notation of XOR is ^ in Javascript</p>
+      <p>1000 0110</p>
+      <p>1000</p>
+      <p>0110</p>
+      <p>1110 (return) = 14</p>
+      <p>•	Exponent in Javascript is **. 2**3 = 8</p>
+      <p>Bitwise shift operators</p>
+      <p>&lt;&lt; and &gt;&gt;</p>
+      <p>a &lt;&lt;  b a multiply by b  </p>
+      <p>a &gt;&gt; b  a divide by b</p>
+      <div>
+        hard equality: all should be equal including data type. This is a way to escape a lazy evaluation when it is needed.<br>
+        <br>
+        In Javascript I can join an array with join method. I can replace comma with other things by putting another thing inside the parentheses.<br>
+        Slicing is done by .slice([start index], [end index]) end index is not included.<br>
+        For example,<br>
+        There is an numbers = [1,2,3,4,5,6,7,8,9 ]<br>
+        Numbers.slice(2,4) return &lsqb;3,4&rsqb;<br>
+        Splice is adding an element to the array. <br>
+        Splice(3,1, “new element”) will add “new element” into the index 3 which is forth element in the array.<br>
+        “new element” will replace the index and move after indexes by 1.<br>
 
+      </div>
+      <div class="question">
+        <h3>Question</h3>
+        <p> if I splice this way how an array will look like&quest;</p>
+        <p>    Array &equals; &lsqb; 1, 2, “old”, 3, 4&rsqb;</p>
+        <p>    Array.splice&lpar;2, 3, &quot;new&quot;&rpar;</p>
+      </div>
+      
+      <div>
+        Weak sets can prevent memory leak.<br>
+        Javascript also has hash map. Using hash rocket (=>)<br>
+        Set() method allows to add multiple items in one line<br>
+        Ex) days.set(1,”Sunday”).set(2,”Monday”).set(3, “Tuesday”)<br>
+        <br>
+        Arrays, Logic and loops are really similar to Java. There is not much different other than the notations. <br>
+        <br>
+        The basic concept of functions are just same as Java. In Javascript it is able to assign a function to a variable as the function is defining in this way:<br>
+        Const testFunction = function() {<br>
+        Console.log(‘test’);<br>
+        };<br>
+        The concept are similar to Java but how the function works and be written is more like Python.<br>
+        I like that Javascript is using lazy evaluation just like Python that I do not need to care about the return type of the function.<br>
+
+        <h3>Arrow Function</h3>
+        
+        <div class="question">  
+          <h3>Question: Arrow function. I have read several times however it is still not clear. I kind of understand the concept but I want to know exactly. </h3>
+          const square = x => x*x;<br>
+            this would work square(2);<br>
+            then return 4?<br>
+          This is what I understand. In the text book it says that an arrow function is always anonymous so I must assign them to a variable. What is this mean?<br>
+          Does it mean that I much assign the function to an variable just like the example square is the variable that takes arrow function?<br>
+        </div>
+        <br>
+        Other functions can be written this way.<br>
+        myFunction() {<br>
+          console.log(“this is an example”)<br>
+        }<br>
+        But arrow function must be assigned when it is written.<br>
+        const arrow = x=> x+1;<br>
+        This is what I understand. Later, when the arrow function is called. We can call the function by using the variable arrow.<br>
+        <div class="question">
+          <h3>Question</h3>
+          However, I do not understand how to call the function. Is it just arrow(1) then return 2?<br>
+          Can forEach also categorized as arrow function?<br>
+        </div>
+      </div>
+    </div>
     
   </main>
 

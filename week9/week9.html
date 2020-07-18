@@ -4,6 +4,7 @@
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
+        <link rel="stylesheet" href="../style.css"/>
     </head>
 
     <body>
@@ -13,7 +14,140 @@
             <div id="hiScore">High Score:<strong></strong></div>
             <h1>Quiz Ninja!</h1>
         </header>
+        <div class="reading">
+            Global object:  any variables that are created with global scope are properties of global object. In a browser environment the global object is the window object. <br>
+            <br>
+            Browser Object Model(BOM)<br>
+                This is a collection of properties and methods that contain information about the browser and computer screen. We can find dimensions of the screen. With the BOM we can create pop ups on window.<br>
+            This is only working in a browser environment. JavaScript can be run in different environments. Assigning the variable global scope.<br>
+            <br>
+            Global variables are for global object. In a browser environment, the global object is the window object.<br>
+            To make a global variable, I need to make a variable without using let, var, or const.<br>
+            globalVariable = 6;<br>
+            <br>
+            <br>
+            Dialogs<br>
+            There are three ways to create dialogs: alert(), confirm(), and prompt()<br>
+            Window.alert(): it will show a pop up<br>
+            Window.confirm(): it will show a pop up with confirm and cancle<br>
+            Window.prompt(): it will show a pop up with input section<br>
+            Location<br>
+            Location property can provide information of URL.<br>
+            location.href: return full URL<br>
+            Window.location.href = ‘https://www.byui.edu<br>
+            Location.protocol: return with which protocol is used for the URL.<br>
+            Window.location.protocol  >> “https:”<br>
+            Location.host: return the domain address of URL. And port number<br>
+            Window.location.host >> www.byui.edu and port. ** if the port is 80, it will be omitted since default is port 80.<br>
+            Location.hostname: return with domain address.<br>
+            Window.location.hostname >> www.byui.edu<br>
+            Location.port: return with port number<br>
+            Window.location.port >> port number<br>
+            Location.pathname: return with a string of path that follows the domain<br>
+            <br>
+            Location.search: return a sting that starts with a ‘?’<br>
+            <br>
+            Location.hash: return a string that starts with ‘#’ ** if there is no ‘#’ in the address. It will return empty string.<br>
+            <br>
+            Location.origin: return a sting that shows the protocol and domain where the current page originated from.<br>
+            <br>
+            Followings are the method of the location object.<br>
+            Reload(): force to reload of the current page.<br>
+            Assign(): load another resource from a URL.<br>
+            Replace(): almost same as assign(). Current page will not be recorded in history.<br>
+            toString(): returns a string containing the whole URL<br>
+            <br>
+            History<br>
+            Window.history.go(1);  // goes forward 1 page<br>
+            Window.history.go(0) // reloads the current page<br>
+            Window.history.go(-1) // goes back 1 page<br>
+            <br>
+            Window.open() method can open a page with URL.<br>
+            Open(param, param, param)<br>
+            1st parameter: URL<br>
+            2nd parameter: window title<br>
+            3rd parameter: list of attributes<br>
+            Close(): close a window.<br>
+            <br>
+            moveTo(param, param): move screen to the x and y coordinates. <br>
+            1st parameter: X coordinate<br>
+            2nd parameter: Y coordinate<br>
+            <br>
+            Screen<br>
+            Screen object contains information of the screen of browser.<br>
+            Window.screen.height will return with screen height of browser<br>
+            Window.screen.width will return with screen width of browser<br>
+            Document.write can write a string on the page.<br>
+            Document.write(“something”);<br>
+            This also create tags such as h1, p, etc.<br>
+            <br>
+            Cookies<br>
+            Cookies are small data that are saved locally on a user’s computer to store useful data such as cart in online shopping. However, it is limited to 20 cookies per site. It is limited to 4KB.<br>
+            Creating cookies<br>
+            Document.cookie = “name=Kisuk”;<br>
+            Document.cookie = “occupation=student”;<br>
+            Document.cookie = “country=Korea”;<br>
+            Chaging cookie<br>
+            Document.cookie = “name=Jacob”;<br>
+            Document.cookie = “country=US”;<br>
+            <br>
+            Reading cookie<br>
+            Document.cookie:<br>
+            >> “name=Jacob; occupation=student; country=US”<br>
+            Const cookies = document.cookie.split(“;”);<br>
+            For (crumb of cookies) {<br>
+            Const [key, value] = crumb.split(“=”);<br>
+            console.log(‘The value of ${key} is ${value} ‘);<br>
+            <br>
+            Expiry Dates<br>
+            Cookies are deleted when browser is closed by default. However it is possible to set expiry date to store cookies beyond the close of browser.  <br>
+            Secure cookies<br>
+            <br>
+            <br>
+            Timing Function<br>
+            setTimeOut(param, param)<br>
+                1st parameter: callback to a function<br>
+                2nd parameter: number of milliseconds<br>
+                <br>
+            To cancel the timeout, use clearTimeOut()<br>
+            <br>
+            HTML<br>
+            Data – Attribute<br>
+            This is a way of embedding data in a web page using custom attributes that are ignored by the browser. Data is private to a page. <br>
+            Geolocation<br>
+            Obtain the geographical position of the device. <br>
+            YouAreHere() function has latitude and longitude property. <br>
+            Const id = navigator.geolocation.watchPosition(youAreHere);<br>
+            clearWatch(): stop the callback being called, using the ID of the watch as an argument.<br>
+            Const worker = new Worker(‘task.js’);<br>
+            postMessage(): send a message and start the worker working<br>
+            Worker.postMessage(‘Hello’); <br>
+            <br>
+            Notification<br>
+            Allows to show message using the system’s notifications. <br>
+            **not good to use pop ups since most of browsers are blocking pop ups.<br>
+            Multimedia<br>
+            &lt;audio&gt; : tag to insert audio <br>
+            &lt;video&gt; : tag to insert video<br>
+            Play(): start the clip playing from its current position<br>
+            Pause(): pause the clip at its current position<br>
+            <br>
+            Shims and Polyfills<br>
+            Shim and polyfill are often used interchangeably. <br>
+            Shim: piece of code that adds some missing functionality to a browser.<br>
 
+
+        </div>
+
+        <footer>
+            &copy; 2020 | Kisuk Jeong | Seoul, Korea | <a href="https://www.byui.edu/online">BYUI Online Learning</a>
+            <br>Last Updated: <span id="date"></span>
+            <script>
+              let today = new Date();
+              let date = today.getDate()+'/'+String (today.getMonth() +1).padStart(2, '0')+'/'+today.getFullYear()+' '+today.getHours()+':'+today.getMinutes()+':'+today.getSeconds();
+              document.getElementById("date").textContent = date;
+            </script> 
+          </footer>
     </body>
     <script>
         function hiScore() {

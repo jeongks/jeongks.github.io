@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Kisuk Jeong | WDD330 Mobile Application Pilot | BYU-Idaho </title>
+  <meta name="description" content="This is an assignment portal home page for WDD330">
+  
+  
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="style.css"/>
+  
+</head>
+<body>
+    <header>
+      <h1>WDD 330 Portfolio</h1>
+    </header>
+    
+    <main>
+      <h2>Week 6</h2>
+      <div class="reading">
+          <div class="pattern1">
+              <h2>Call Methods</h3>
+                Method syntax:  myfunction.call(parameter)<br>
+                This method can be used to set the value of this inside a function.<br>
+                <div class="example">
+                    Example:<br>
+                    Function myfunction(){ <br>
+                        return “Hi, my name is ${this.name}”;<br>
+                    }<br>
+                    const jacob = { name: ‘Jacob’ };<br>
+                    const rani = { name: ‘Rani’ };<br>
+                    myfunction.call(Jacob);<br>
+                    output: “Hi, my name is Jacob”<br>
+                    myfunction.call(rani);<br>
+                    output: “Hi, my name is Rani”<br>
+                    <br>
+                </div>
+              
+                ***to make a function more generalized***<br>
+                Function myfunction(greeting=”Hi”){<br>
+                    return “${ greeting }, my name is ${ this.name}”;<br>
+                myfunction.call(jacob, ‘How do you do’);<br>
+                output: “How do you do, my name is Jacob”<br>
+                myfunction.call(rani);<br>
+                output: “Hi, my name is rani”<br>
+                *************************************<br>
+                In myfunction(greeting=”Hi”), greeting=”Hi” is setting up a default greeting word in case there is no specific input is passed to the function. <br>
+                **** If call function is not referring an object as this in its body, it can be used by providing null the its first argument. <br>
+                <div class="example">
+                    Example:<br>
+                    Square.call(null, 4)  <br>
+                    Output: 16 <br>
+                    ++++ apply() method will work in the same way. However apply() method will receive argument as an array even those there is only one argument. <br>
+                </div>
+                <div class="example">
+                    Example:<br>
+                    Square.apply(null, [4]) <br>
+                    Output: 16 <br>   
+                </div>
+                 
+          </div>
+          <div class="pattern2">
+                <h2>Custom Properties</h2>
+                    It is possible to add properties of function to any object in javaScript.<br>
+                <div class="example">
+                    Example:<br>
+                    Square.description = “squares a number that is provided as an argument”<br>
+                </div>  
+                <h3>Memoization</h3>
+                Memoizaiton is same as caching.<br>
+                Function can store caches for better response time. Especially when function takes time to calculate or compute a return value.<br>
+                <div class="example">
+                    Example:<br>
+                    Function square(x){<br>
+                    Square.cache = square.cache || {};<br>
+                    If (!square.cache[x]) {<br>
+                        Square.cache[x] = x*x;<br>
+                    }<br>
+                    return square.cache[x]<br>
+                    }<br>
+                    Square(3); output: 9<br>
+                    Square(-11); output: 121<br>
+                    Square.cache; output: {“3”: 9, “-11”: 121}<br>
+                </div>
+                <h3>Immediately Invoked Function Expressions</h3>
+                IIFE is an anonymous function that is invoked as soon as it is defined.<br>
+                <div class="example">
+                    Example:<br>
+                    (function(){<br>
+                    Const temp = “World”;<br>
+                    Console.log(“Hello ${temp}”);<br>
+                    })();<br>
+                    Output: “Hello World”<br>
+
+                </div>
+                <h3>Temporary Variables</h3>
+                Once variable is been declared, it is not able to remove a variable from its scope.<br>
+                Temporary variables are used for when variable is only required temporarily. To do this, use temporary variable called temp.<br>
+                Let a = 1;<br>
+                Let b = 2;<br>
+                (()=>{<br>
+                Const temp = a;<br>
+                a = b;<br>
+                b = tmep;<br>
+                })();<br>
+                a; output 2<br>
+                b; output 1<br>
+                console.log(temp); output: Error: “temp is not defined”<br>
+                another way to do :<br>
+                let [a,b] = [1,2];<br>
+                [a,b] = [b,a];<br>
+                a; output: 2<br>
+                b; output: 1<br>
+                
+          </div>
+      </div>
+      
+    </main>
+  
+    <footer>
+      &copy; 2020 | Kisuk Jeong | Seoul, Korea | <a href="https://www.byui.edu/online">BYUI Online Learning</a>
+      <br>Last Updated: <span id="date"></span>
+      <script>
+        let today = new Date();
+        let date = today.getDate()+'/'+String (today.getMonth() +1).padStart(2, '0')+'/'+today.getFullYear()+' '+today.getHours()+':'+today.getMinutes()+':'+today.getSeconds();
+        document.getElementById("date").textContent = date;
+      </script> 
+    </footer>
+  
+  </body>
+  
+  </html>
+  
