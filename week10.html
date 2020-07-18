@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Kisuk Jeong | WDD330 Mobile Application Pilot | BYU-Idaho</title>
+  <meta name="description" content="This is an assignment portal home page for WDD330">
+  
+  
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="style.css"/>
+  
+</head>
+
+<body>
+  <header>
+    <h1>WDD 330 Portfolio</h1>
+  </header>
+  
+  <main>
+    <h2>Week 10</h2>
+    <div class="reading">
+        <div>
+            <h2>Form Validation</h2>
+            Required information
+            Format
+            Data length
+            Browser and web server will check data that meets the constraints of input data format. 
+            Client-sdie validation : done in the browser
+            Server-side validation: validation done on the server.
+            
+        </div>
+        <div>
+            <h3>Types of client-side validation</h3>
+            Built-in form validation uses HTML5 form validation feature. It dose not require JavaScript. It performs better than JavaScript, but it is not customizable.
+            JavaScript validation is using JavaScript. Completely customizable.
+            
+        </div>
+        <div>
+            <h3>Built-in form valication</h3>
+            Required  - need to be filled to submit form
+            Minlength & maxlength – specify length of input data(strings)
+            Min & max -  specify value of numberical input types
+            Type – type of data
+            Pattern – regular expression
+            
+            :valid pseudo-class & :invalid pseudo-class exist. Able to style it.
+            
+        </div>
+        <div>
+            <h3>Regular Expression</h3>
+            a — Matches one character that is a (not b, not aa, and so on).
+            abc — Matches a, followed by b, followed by c.
+            ab?c—Matches a, optionally followed by a single b, followed by c. ( ac or abc)
+            ab*c—Matches a, optionally followed by any number of bs, followed by c. ( ac , abc, abbbbbc, and so on).
+            a|b — Matches one character that is a or b.
+            abc|xyz — Matches exactly abc or exactly xyz (but not abcxyz or a or y, and so on).
+
+        </div>
+        <div>
+            <h3>Constraint validation API</h3>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/API/Constraint_validation">Constraint Validation API</a> <br>
+            <span>
+                    set of methods and properties available on the following form element DOM interfaces  <br>
+                    HTMLButtonElement &lpar;represents a &lt;button&gt; element&rpar; <br>
+                    HTMLFieldSetElement &lpar;represents a &lt;fieldset&gt; element&rpar; <br>
+                    HTMLInputElement &lpar;represents an &lt;input&gt; element&rpar;<br>
+                    HTMLOutputElement &lpar;represents an &lt;output&gt; element&rpar;<br>
+                    HTMLSelectElement &lpar;represents a &lt;select&gt; element&rpar;<br>
+                    HTMLTextAreaElement &lpar;represents a &lt;textarea&gt; element&rpar;<br>
+                    <br>
+                Properties in Constraint validation API:<br>
+                validationMessage: returns a localized message describing the validation constraints.<br>
+                Validity: return a validityState. <br>
+                    patternMismatch<br>
+                    tooLong<br>
+                    tooShort<br>
+                    rangeOverFlow<br>
+                    typeMismatch<br>
+                    valid<br>
+                    valueMissing<br>
+                willValidate: return true if the element will be validated when the form is submitted.<br>
+                <br>
+                <h3>Methods:</h3>
+                checkValidity(): return true if the element’s value has no validity problems<br>
+                setCustomValidity(message) : add a custom error message to the element.<br>
+                <br>
+                Without using API, it needs to be built.<br>
+                <br>
+                    </span>
+        </div>
+        <div>
+            <h3>Using Fetch</h3>
+            Thee main ways from JQuery.ajax()
+            Promise returned from fetch() won’t reject on HTTP error status.
+            Fetch() can receive cross-site cookies
+            Fetch won’t send cookies
+
+            Syntax
+            fetch(url)
+            .then (response => response.json())
+            .then(data => console.log(data));
+
+        </div>
+        <div>
+            <h3>Response objects</h3>
+            Response.status – an integer containing the response status code (default value 200)
+            Response.statusText –  a string witch coreesponds to the HTTP status code messge (default value “OK”)
+            Response.ok – this is a shorthand for checking that status in in the range 200-299. Return Boolean.
+            <div>
+                <h3>Body</h3>
+                Requests and responses may contain body data.
+                ArrayBuffer
+                ArraBufferView
+                Blob/File
+                String
+                URLSearchParams
+                FormData
+    
+                Body mixin
+                arrayBuffer()
+                blob()
+                json()
+                text()
+                formData()
+                all return a promise
+    
+            </div>
+        </div>
+        
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2020 | Kisuk Jeong | Seoul, Korea | <a href="https://www.byui.edu/online">BYUI Online Learning</a>
+    <br>Last Updated: <span id="date"></span>
+    <script>
+      let today = new Date();
+      let date = today.getDate()+'/'+String (today.getMonth() +1).padStart(2, '0')+'/'+today.getFullYear()+' '+today.getHours()+':'+today.getMinutes()+':'+today.getSeconds();
+      document.getElementById("date").textContent = date;
+    </script> 
+  </footer>
+
+  
+</body>
+
+</html>

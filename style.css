@@ -3,7 +3,9 @@ body {
     margin: 10px 5%;
 }
 
-
+div {
+    margin: 10px 0;
+}
 .reading {
     background-color: #f2f3e7;
 }
