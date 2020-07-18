@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+    </head>
+    <style>
+        #transformAndTranslate {
+            margin: 0;
+            padding: 0;
+            font-family: arial;
+            width: 40%;
+        }
+        .loader {
+            height: 25%;
+            transform: skew(5deg, -1deg);
+            background-color: aqua;
+            
+        }
+        .loader h1 {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            text-transform: uppercase;
+            transform: skew(5deg, -3deg);
+            font-size: 10em;
+            color: rgba(0,0,255, .1);
+            background-image: url(background-leaves.png);
+            background-repeat: repeat-x;
+            background-clip: text;
+            -webkit-background-clip: text;
+            animation: animate 15s linear infinite
+        }
+        @keyframes animate {
+            0% {
+                background-position: left 0px top 80px;
+            }
+            40% {
+                background-position: left 800px top -50px;
+            }
+            80% {
+                background-position: left 1800px top -150px;
+            }
+            100% {
+                background-position: left 2400px top -250px;
+            }
+        }
+        .rectangle {
+            fill:bisque;
+            stroke: yellow;
+            stroke-width: 10;
+            opacity: 0.5;
+        }
+    </style>
+    <body>
+        <div id="transformAndTranslate">
+            <h2>Transform and Translate</h2>
+            <div class="loader">
+                
+                <h1>Nature</h1>
+            </div>
+        </div>
+        <div id="testingCanvas" >
+            <h2>canvas drawing</h1>
+            <canvas id="test1canvas" class="test1canvas" width="1100" height="300">
+                
+            </canvas>
+        </div>
+        <h2>SVG drawing</h2>
+        <svg width="200" height="200">
+            <defs>
+                <pattern id="myPattern" patternUnits="userSpaceOnUse" x="0" y="0" width="50" height="50">
+                    <rect x="0" y="0" width="50" rx="10" ry="10" height="50" class="rectangle" />
+                    <circle cx="25" cy="25" r="8" fill="orange" storke="blue" stroke-width="2" />
+                </pattern>
+            </defs>
+            <circle cx="100" cy="100" r="100" fill="url(#myPattern)" stroke-width="1" storke="blue"/>
+        </svg>
+        
+    </body>
+    <script>
+        
+
+        drawPattern();
+        function drawPattern() {
+            let canvas = document.getElementById("test1canvas");
+            let context = canvas.getContext("2d");
+            context.strokeStyle = "black";
+            context.fillStyle = "rgba(255,0,0, 0.1)";
+            context.fillRect(10,10,1100,300);
+            context.strokeRect(10,10,1100,300);
+
+            var img = new Image();
+            img.src = "flower.png";
+            img.onload = function() {
+                var pattern = context.createPattern(img, "repeat");
+                context.fillStyle = pattern;
+                context.fillRect(10,10,1100,300);
+                context.strokeRect(10,10,1100,300);               
+            };
+        };
+        
+    </script>
+</html>

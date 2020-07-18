@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Kisuk Jeong: Week4</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: 50px 50px 50px;
+            grid-template-rows: 50px 50px 50px;
+            justify-content: center;
+        }
+        .container div{
+            border: 1px solid;
+        }
+        
+        #reset {
+            margin: 10px auto;
+        }
+    </style>
+    
+  </head>
+  <body>
+    <header>
+        <h1>Kisuk Jeong</h1>
+        <h2>WDD 330 </h2>
+        <h3>Week 4</h3>
+    </header>
+    <main>
+        <h1>Tic-Tac-Toe</h1> 
+        <div class="container">
+            <div id="topleft"></div>
+            <div id="topmcenter"></div>
+            <div id="topright"></div>
+            <div id="middleleft"></div>
+            <div id="middlecenter"></div>
+            <div id="middleright"></div>
+            <div id="bottomleft"></div>
+            <div id="bottomcenter"></div>
+            <div id="bottomright"></div>
+            
+            
+        </div>
+        <button id="reset">Reset</button>
+        
+    </main>
+    <script>
+        const board = document.querySelector('container');
+        const resetBnt = document.getElementById('reset');
+        const player1 = 'X';
+        const player2 = 'O';
+        let player = player1;
+        function addPiece(e) {
+            console.log(e.target);
+            e.target.innerHTML = player;
+            if (player == player1) player = player2;
+            else player = player1;
+        }
+        function resetGame() {s
+            const board = document.querySelector('container');
+            for (let i = 0; i < container.children.length; i++){
+                board.children[i].innerText = '';
+            }
+            const children = Array.from(board.children);
+            const empty = children.filter(function(child){
+                return child.innerText == 'X' || child.innerText == 'O';
+            });
+            console.log(empty);
+        }
+        
+        board.addEventListener('click',addPiece);
+        resetBnt.addEventListener('click', resetGame);
+
+    </script>
+
+      
+  </body>
+</html>

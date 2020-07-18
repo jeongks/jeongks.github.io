@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Kisuk Jeong | WDD330 Mobile Application Pilot | BYU-Idaho </title>
+  <meta name="description" content="This is an assignment portal home page for WDD330">
+  
+  
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+  
+</head>
+
+<body>
+  <header>
+    <h1>WDD 330 Portfolio</h1>
+  </header>
+  
+  <main>
+    <h2>Week 2</h2>
+    
+    
+        <h3>01</h3>
+        <input type="text" id="input1">
+        <button id="input1Btn" onclick="input1Write()">Write</button>
+        <div id="input1div"></div>
+
+        <h3>02</h3>
+        <input type="text" id="input2">
+        <button id="input2Btn" onclick="input2Sum()">Sum</button>
+        <div id="input2div"></div>
+        
+        <h3>03</h3>
+        <input type="text" id="input3">
+        <button id="addBtn" onclick="input3Add()">+</button>
+        <button id="subBtn" onclick="subtract()">-</button>
+        <button id="multBtn" onclick="multiply()">*</button>
+        <input type="text" id="input4">
+        
+        <div id="input3div"></div>
+
+    
+  </main>
+
+  <footer>
+    &copy; 2020 | Kisuk Jeong | Seoul, Korea | <a href="https://www.byui.edu/online">BYUI Online Learning</a>
+    <br>Last Updated: <span id="date"></span>
+    <script>
+      let today = new Date();
+      let date = today.getDate()+'/'+String (today.getMonth() +1).padStart(2, '0')+'/'+today.getFullYear()+' '+today.getHours()+':'+today.getMinutes()+':'+today.getSeconds();
+      document.getElementById("date").textContent = date;
+    </script> 
+  </footer>
+
+  <script>
+      function input1Write() {
+          const input = document.getElementById('input1').value;
+          const divinput = document.getElementById('input1div');
+          divinput.innerHTML = '' + input;
+      }
+      function input2Sum() {
+          const input = document.getElementById('input2').value;
+          const divinput = document.getElementById('input2div');
+          
+          const inputNumber = parseInt(input);
+          if (inputNumber !== NaN){
+              let result = 0;
+              for (let i = 1; i <=inputNumber; i++){
+                  result += i;
+              }
+              divinput.innerHTML = ''+ result;
+          }
+      }
+      function input3Add() {
+          const input1 = document.getElementById('input3').value;
+          const input2 = document.getElementById('input4').value;
+          const divinput = document.getElementById('input3div');
+
+          const inputNumber1 = parseInt(input1);
+          const inputNumber2 = parseInt(input2);
+          const result = inputNumber1 + inputNumber2;
+          
+          divinput.innerHTML = ''+ result;
+      }
+      
+      const subtract = () => {
+        const input1 = document.getElementById('input3').value;
+        const input2 = document.getElementById('input4').value;
+        const divinput = document.getElementById('input3div');
+        const inputNumber1 = parseInt(input1);
+        const inputNumber2 = parseInt(input2);
+        divinput.innerHTML = ''+ inputNumber1 - inputNumber2;
+      }
+    
+      const multiply = () => {
+        const input1 = document.getElementById('input3').value;
+        const input2 = document.getElementById('input4').value;
+        const divinput = document.getElementById('input3div');
+        const inputNumber1 = parseInt(input1);
+        const inputNumber2 = parseInt(input2);
+        divinput.innerHTML = ''+ inputNumber1 * inputNumber2;
+      }
+  </script>
+
+</body>
+
+</html>
