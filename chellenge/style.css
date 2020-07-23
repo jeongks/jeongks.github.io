@@ -1,0 +1,95 @@
+body {
+  width: 90%;
+  margin: 10px 5%; }
+
+header {
+  margin: 10px 0;
+  background-image: url("./banner.jpg");
+  min-height: 200px; }
+  header .headingBackground {
+    background-color: #e7f3f2;
+    opacity: 0.7;
+    width: 50%;
+    display: block;
+    text-align: center;
+    border-radius: 30%;
+    margin: 0 auto;
+    padding: 20px 10px; }
+    header .headingBackground h1 {
+      color: black;
+      margin: 10px auto;
+      font-size: 3em; }
+    header .headingBackground h2 {
+      color: black;
+      margin: 0 auto;
+      font-size: 2em;
+      font-style: italic; }
+
+#common {
+  background-color: #cdf7f6; }
+  #common table {
+    margin: 0 auto;
+    background-color: #e7f3f2; }
+    #common table tr {
+      font-size: 1.2em; }
+      #common table tr th {
+        font-size: 1.3em;
+        padding: 5px 10px 5px 10px;
+        background-color: grey; }
+      #common table tr :nth-child(1) {
+        background-color: #c2c5bb; }
+      #common table tr td {
+        border: 1px solid black; }
+        #common table tr td button {
+          text-transform: uppercase;
+          border-radius: 45px;
+          box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+          transition: all 0.3s ease 0s;
+          cursor: pointer;
+          outline: none;
+          color: #000;
+          background-color: #fff; }
+          #common table tr td button:hover {
+            background-color: #cdf7f6;
+            box-shadow: 0px 15px 20px rgba(205, 247, 246, 0.4);
+            color: #000;
+            transform: translateY(-2px); }
+  #common p {
+    color: red;
+    margin: 5px 0 20px 420px;
+    padding-bottom: 20px; }
+  #common #detailInfo {
+    margin: 10px auto;
+    text-align: center; }
+    #common #detailInfo h3 {
+      font-size: 2em;
+      margin: 20px;
+      padding-top: 20px; }
+
+#search {
+  margin-top: 10px;
+  background-color: #73d2de;
+  text-align: center; }
+  #search label {
+    font-size: 2em;
+    font-weight: bold; }
+  #search #warning {
+    font-size: 1.5em;
+    color: red; }
+  #search input {
+    font-size: 2em;
+    border-radius: 45px; }
+  #search #search {
+    text-transform: uppercase;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: #218380; }
+    #search #search:hover {
+      background-color: #cdf7f6;
+      box-shadow: 0px 15px 20px rgba(205, 247, 246, 0.6);
+      color: #000;
+      transform: translateY(-2px); }
