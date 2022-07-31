@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Kisuk Jeong | WDD330 Mobile Application Pilot | BYU-Idaho</title>
+  <meta name="description" content="This is an assignment portal home page for WDD330">
+  
+  
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+
+<body>
+  <header>
+    <h1 id="myname">Kisuk Jeong</h1>
+  </header>
+  
+  <main>
+    <h2>WDD330 Portfolio</h2>
+    <ol>
+      <li><a href="week1.html">Week 01</a></li>
+      <li><a href="week2.html">Week 02</a></li>
+      <li><a href="week3.html">Week 03</a></li>
+      <li><a href="week4.html">Week 04</a></li>
+      <li><a href="week5.html">Week 05</a></li>
+      <li><a href="week7.html">Week 07</a></li>
+      <li><a href="/week8/week8.html">Week 08</a></li>
+      <li><a href="week9.html">Week 09</a></li>
+      <li><a href="week10.html">Week 10</a></li>
+      <li><a href="/chellenge/index.html">Final</a></li>
+    </ol>
+
+  </main>
+
+  <footer>
+    &copy; 2020 | Kisuk Jeong | Seoul, Korea | <a href="https://www.byui.edu/online">BYUI Online Learning</a>
+    <br>Last Updated: <span id="date"></span>
+    <script>
+      let today = new Date();
+      let date = today.getDate()+'/'+String (today.getMonth() +1).padStart(2, '0')+'/'+today.getFullYear()+' '+today.getHours()+':'+today.getMinutes()+':'+today.getSeconds();
+      document.getElementById("date").textContent = date;
+    </script> 
+  </footer>
+
+  
+</body>
+
+</html>
