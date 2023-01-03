@@ -1,0 +1,19 @@
+{
+  "name": "jeongks.github.io",
+  "version": "1.0.0",
+  "description": "my portfolio page",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeongks/jeongks.github.io.git"
+  },
+  "author": "Kisuk Jeong",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jeongks/jeongks.github.io/issues"
+  },
+  "homepage": "https://github.com/jeongks/jeongks.github.io#readme"
+}
