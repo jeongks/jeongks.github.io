@@ -3,7 +3,7 @@
 
 ## 백엔드 로직(API)설계
 **1주차: 로그인 기능**
-- [x] express환경 구축
+- [x] ~~express환경 구축~~
 - [ ] password hashing
 - [ ] jwt를 통한 Tokenization
 - [ ] cookie 설정을 통한 자동 로그인
