@@ -8,6 +8,7 @@ app.get('/', (req,res)=>{
     res.send("express works!");
 })
 
+app.get('/login');
 
 const server = app.listen(port, ()=>{
     console.log(`listening on ${port}`);
