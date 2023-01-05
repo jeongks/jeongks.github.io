@@ -3,3 +3,7 @@ node_modules/
 
 #dotenv files
 .env
+
+
+#config data
+config.json

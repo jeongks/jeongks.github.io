@@ -1,6 +1,7 @@
 const jwt = require("jsonwebtoken");
 const bcrypt = require('bcrypt');
 
+
 //This is generate salt and hash function to crypt the password and return callback function so that the errors in the process can be handled in other functions
 //where require crypting password
 var cryptPassword = function (password, callback){
@@ -14,6 +15,8 @@ var cryptPassword = function (password, callback){
 }
 
 
+
+
 //compare password and hashed password to see if the authentication attemp is valid. 
 // if there is no error it will return the callback with result of matching password and hashed password
 // it there is error it will return error with callback so that the functions where requires password comparison will be handled.
@@ -21,5 +24,25 @@ var comparePasword = function (password, hash, callback){
     bcrypt.compare(password, hash, function(err, isMatch){
         return err == null ? callback(null, isMatch) : callback(null);
     })
+}
+
+module.exports.cryptPassword = cryptPassword;
+module.exports.comparePasword = comparePasword;
+
+
+module.exports.init = async function(app){
+    const db = await require('../db/db').connection;
+
+    app.use(cookieSession({
+        keys:['auth'],
+        cookie:{
+            path: '/', httpOnly: true,
+            maxAge: 1000*60*60*24*30 //유효기간: 한달
+        }
+    }));
+
+    app.set('jwt-secret',"random18293string5142fe3d");
+
+    
 }
 
