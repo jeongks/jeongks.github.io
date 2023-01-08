@@ -1,0 +1,11 @@
+{
+    "online":{
+        "host": "not set"
+    },
+    "local":{
+        "host":"127.0.0.1:3000",
+        "db_url":"mongodb+srv://kisuk-master:MbUj0tHpD14cGNVm@portfolio.vdcpjjc.mongodb.net/?retryWrites=true&w=majority"
+    }
+    
+
+}
