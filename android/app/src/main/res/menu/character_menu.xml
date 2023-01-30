@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/training_menu"
+        android:icon="@drawable/ic_training_24"
+        android:title="훈련"/>
+    <item
+        android:id="@+id/equipment_menu"
+        android:icon="@drawable/ic_equipment_24"
+        android:title="장비"/>
+    <item
+        android:id="@+id/inventory_menu"
+        android:icon="@drawable/ic_inventory_24"
+        android:title="가방"/>
+    <item
+        android:id="@+id/skill_menu"
+        android:icon="@drawable/ic_skill_24"
+        android:title="스킬"/>
+    <item
+        android:id="@+id/ability_menu"
+        android:icon="@drawable/ic_ability_24"
+        android:title="능력"/>
+</menu>
