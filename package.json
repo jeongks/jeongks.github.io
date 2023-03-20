@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/jeongks/jeongks.github.io/issues"
   },
-  "homepage": "https://github.com/jeongks/jeongks.github.io#readme"
+  "homepage": "https://github.com/jeongks/jeongks.github.io#readme",
+  "dependencies": {
+    "ejs": "^3.1.9"
+  }
 }
