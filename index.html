@@ -7,23 +7,31 @@
   <title>Kisuk Jeong Working Note</title>
   <meta name="description" content="This is my personal website for my Portfolio">
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
   
 </head>
 
 <body>
   <header>
-    <h1 id="myname">Kisuk Jeong's Portfolio</h1>
+    <h1 id="myname">정기석의 포트폴리오</h1>
   </header>
   
   <main>
-    <h2>My Portfolio</h2>
-    <ol>
-      <li><a href="/chellenge/index.html">searching food nutrition information(Using FoodData Central API)</a></li>
-      <li><a href="https://brass-quail-9b3.notion.site/HTTP-Request-and-Response-86e3f93548d64dd0b454bcb03d63491d">Backend Study Note</a></li>
-      <li><a href="127.0.0.1:3000/login">Week #01 : Log in</a></li>
-    </ol>
-
+    <h2>Portfolios</h2>
+    <div class="portfolio-wrap">
+      <div class="portfolio-container"><a href="/chellenge/index.html" target="_blank">
+        <img class="portfolio-capture" src="./assets/img/nutrion_info.png">
+        <p class="portfolio-title">Nutrition information, since 2019</p>
+      </a></div>
+      <div class="portfolio-container"><a href="https://brass-quail-9b3.notion.site/HTTP-Request-and-Response-86e3f93548d64dd0b454bcb03d63491d" target="_blank">
+        <img class="portfolio-capture" src="./assets/img/notion_study.png">
+        <p class="portfolio-title">Study note, since 2023, working on</p>
+      </a></div>
+      <div class="portfolio-container"><a href="tmeal.html" target="_blank">
+        <img class="portfolio-capture tmeal_img" src="./assets/img/tmeal.png">
+        <p class="portfolio-title">Mobile Web App, since 2023, working on</p>
+      </a></div>
+    </div>
   </main>
 
   <footer>
@@ -31,7 +39,7 @@
     <br>Last Updated: <span id="date"></span>
     <script>
       let today = new Date();
-      let date = today.getDate()+'/'+String (today.getMonth() +1).padStart(2, '0')+'/'+today.getFullYear()+' '+today.getHours()+':'+today.getMinutes()+':'+today.getSeconds();
+      let date = today.getFullYear()+'/'+String (today.getMonth() +1).padStart(2, '0')+'/'+today.getDate();
       document.getElementById("date").textContent = date;
     </script> 
   </footer>

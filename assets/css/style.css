@@ -1,0 +1,94 @@
+body {
+    width: 90%;
+    margin: 10px auto;
+    padding: 10px;
+    overflow-y: scroll;
+
+}
+
+header{
+    width: 100%;
+    padding: 10px;
+    border-bottom: 2px solid black;
+    border-top: 2px solid black;
+}
+
+header, footer, main{
+    margin: 0 auto;
+}
+
+main{
+    width: 90%;
+   
+    
+}
+
+.portfolio-wrap{
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    
+    overflow: hidden;
+}
+
+.portfolio-wrap .portfolio-container{
+    position:relative;
+    width: 31%;
+    max-height: 600px;
+    margin: 0 1%;
+    
+    overflow:hidden;
+    padding: 10px
+}
+.portfolio-wrap .portfolio-container a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.portfolio-wrap .portfolio-container a:hover{
+    transform: scale(1.1);
+}
+
+.portfolio-wrap .portfolio-container img{
+    width: 100%;
+}
+
+.portfolio-wrap .portfolio-container .portfolio-title{
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%);
+    text-align: center;
+    width: 80%;
+    border-radius: 5px;
+    background-color: rgba(33,33,33,0.5);
+    padding: 10px;
+    color: #fff;
+    text-decoration: underline;
+}
+
+
+.reading {
+    background-color: #f2f3e7;
+}
+
+.question {
+    font-size: 1.2em;
+    background-color: aquamarine;
+}
+
+.example {
+    background-color: antiquewhite;
+    margin: 10px;
+    padding: 10px;
+}
+
+footer {
+    width: 90%;
+    margin-top: 10px;
+    padding: 10px;
+    border-top: 5px solid green;
+    color:#fff;
+    background-color: #5d432c;
+}

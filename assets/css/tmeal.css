@@ -1,0 +1,45 @@
+main {
+    
+}
+
+.main_wrap{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.main_wrap .img_wrap{
+    width: 28%;
+    display: flex;
+}
+
+.main_wrap .img_wrap .tmeal{
+    width: 90%;
+    
+}
+
+.main_wrap .text_wrap{
+    width: 70%;
+    border: 1px solid black;
+}
+
+.main_wrap .text_wrap .text_header_wrap{
+    padding: 10px;
+}
+
+.main_wrap .text_wrap .text_desc_wrap {
+    padding: 10px;
+}
+
+.main_wrap .text_wrap .text_desc_wrap .roll_desc:nth-child(2n){
+    margin-bottom: 10px;
+}
+
+.main_wrap .text_desc_wrap .roll_desc{
+    margin: 0;
+}
+
+.strong{
+    font-weight: bold;
+}
